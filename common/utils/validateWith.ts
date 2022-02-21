@@ -32,6 +32,6 @@ const checkEither =
       const checkedValue = check(value);
       return right(checkedValue);
     } catch (error) {
-      return left(error);
+      return left(error as ValidationError);
     }
   };
